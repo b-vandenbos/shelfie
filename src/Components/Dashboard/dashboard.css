@@ -1,0 +1,7 @@
+.product-container {
+    width: 25%;
+    justify-content: flex;
+    align-items: center;
+    margin: auto;
+}
+

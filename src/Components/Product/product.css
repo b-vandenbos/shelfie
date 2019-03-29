@@ -1,0 +1,55 @@
+.product {
+    display: flex;
+    background: #D34735;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 50px auto 10px;
+}
+
+.product-image {
+    width: 50%;
+}
+
+.product-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.product-info-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 10px;
+
+}
+
+.product-name {
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+.product_price {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+.product-edit-buttons {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.edit-button {
+    background: #3AD886;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
