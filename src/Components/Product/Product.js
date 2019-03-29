@@ -5,7 +5,7 @@ export default class Product extends Component {
     
 
 render() {
-    let {product, deleteProduct, loadProducts} = this.props;
+    let {product, deleteProduct, edit} = this.props;
     return (
         <div className='product'>
             <img className="product-image" src={product.img} alt={product.name}/>
@@ -16,7 +16,7 @@ render() {
                 </div>
                 <div className='product-edit-buttons'>
                     <button className="edit-button" onClick={() => deleteProduct(product.id)}>Delete</button>
-                    <button className="edit-button">Edit</button>
+                    <button className="edit-button" onClick={edit}>Edit</button>
                 </div>
             </div>
 

@@ -11,12 +11,15 @@ class App extends Component {
 
     this.state = {
       products: [],
+      edit: false
     }
 
     this.loadProducts = this.loadProducts.bind(this);
     this.createProduct = this.createProduct.bind(this);
     this.deleteProduct = this.deleteProduct.bind(this);
     this.updateProduct = this.updateProduct.bind(this);
+    this.edit = this.edit.bind(this);
+    this.noEdit = this.noEdit.bind(this);
   }
 
 componentDidMount() {
@@ -48,15 +51,28 @@ updateProduct(product) {
   .then(results => this.setState({products: results.data}))
   .catch(err => console.log(`There was an error in updating this product: ${err}`));
 }
-  
+
+edit() {
+  if (this.state.edit === false) {
+    this.setState({edit: true});
+  }
+  else {
+    this.setState({edit: false});
+  }
+}
+
+noEdit() {
+  this.setState({edit: false});
+}
+
   render() {
-    let {products} = this.state;
+    let {products, edit} = this.state;
     return (
       <div className="container">
         <Header />
         <section>
-          <Dashboard products={products} deleteProduct={this.deleteProduct} loadProducts={this.loadProducts} updateProduct={this.updateProduct}/>
-          <Form createProduct={this.createProduct} loadProducts={this.loadProducts}/>
+          <Dashboard products={products} deleteProduct={this.deleteProduct} loadProducts={this.loadProducts} updateProduct={this.updateProduct} edit={this.edit}/>
+          <Form createProduct={this.createProduct} loadProducts={this.loadProducts} edit={edit}/>
         </section>
       </div>
     ) 
