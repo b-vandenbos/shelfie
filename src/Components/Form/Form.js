@@ -80,7 +80,7 @@ render() {
         <p className='form-input-label'>Price: </p>
         <input className='form-input' name="price" value={this.state.price} onChange={e => this.watchPrice(e.target.value)} />
         <div className='form-edit-buttons'>
-            <button className='form-button'>Cancel</button>
+            <button className='form-button' onClick={this.cancel}>Cancel</button>
             <button className='form-button' onClick={this.createProduct}>Add to Inventory</button>
         </div>
     </div>

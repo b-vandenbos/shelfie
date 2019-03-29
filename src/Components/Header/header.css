@@ -15,19 +15,20 @@ h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 30px;
+    margin-left: 100px;
 }
 
 .navbar {
-    margin-left: 40px;
+    margin-left: 50px;
 }
 
 .nav-button {
     font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
     font-weight: 700;
     margin: 0 5px;
     background: #ED6B5A;
     border: none;
     border-radius: 5px;
     padding: 5px;
-
 }
